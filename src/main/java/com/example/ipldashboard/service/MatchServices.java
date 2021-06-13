@@ -2,7 +2,6 @@ package com.example.ipldashboard.service;
 
 import com.example.ipldashboard.Model.Match;
 import com.example.ipldashboard.repo.MatchRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 

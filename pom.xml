@@ -16,7 +16,9 @@
 	<properties>
 		<java.version>11</java.version>
 
+		<!--Important for deploy in heroku-->
 		<maven.compiler.source>15</maven.compiler.source>
+		<!--Important for deploy in heroku-->
 		<maven.compiler.target>15</maven.compiler.target>
 	</properties>
 	<dependencies>
@@ -77,6 +79,7 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<!--Important for deploy in heroku-->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.4</version>
@@ -86,6 +89,7 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<!--Important for deploy in heroku-->
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>3.0.3</version>

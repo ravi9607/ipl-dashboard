@@ -4,18 +4,14 @@ import com.example.ipldashboard.Model.Team;
 import com.example.ipldashboard.repo.MatchRepo;
 import com.example.ipldashboard.repo.TeamRepo;
 import com.example.ipldashboard.service.MatchServices;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 import org.springframework.data.domain.Pageable;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin
 public class TeamController {
 
     private final TeamRepo teamRepo;
@@ -34,7 +30,7 @@ public class TeamController {
         Team team = this.teamRepo.findByTeamName(teamName);
         //Pageable pageable = PageRequest.of(0, 4);  // using pageable set output result size
 
-//        team.setMatches(matchRepo.findLatestMatchesByTeam(teamName,4));
+        //team.setMatches(matchRepo.findLatestMatchesbyTeam(teamName,4));
         team.setMatches(matchServices.LatestMatch(teamName,5));
 
         return team;
