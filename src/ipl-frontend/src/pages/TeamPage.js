@@ -2,16 +2,16 @@ import { React, useEffect, useState } from 'react';
 import { MatchSmallCard } from '../components/MatchSmallCard'
 import { MatchDetailCard } from '../components/MatchDetailCard'
 // import { axios } from 'axios';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 
 export const TeamPage = () => {
 
-    const [team, setTeam] = useState({});
+    const [team, setTeam] = useState([]);
     const { teamName } = useParams();
     useEffect(() => {
         const fetchMatches = async () => {
-            const response = await fetch(`https://ipl-backend-api.herokuapp.com/api/team/${teamName}`);
+            const response = await fetch(`http://localhost:8080/api/team/${teamName}`);
             const data = await response.json();
             setTeam(data);
             console.log(data);
