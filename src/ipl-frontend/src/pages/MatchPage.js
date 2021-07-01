@@ -10,7 +10,9 @@ export const MatchPage = () => {
     const { teamName, year } = useParams();
     useEffect(() => {
         const fetchMatches = async () => {
-            const response = await fetch(`http://localhost:8080/api/team/${teamName}/matches?year=${year}`);
+            //const response = await fetch(`http://localhost:8080/api/team/${teamName}/matches?year=${year}`);
+            const response = await fetch(`https://ipl-backend-api.herokuapp.com/api/team/${teamName}/matches?year=${year}`);
+
             const data = await response.json();
             setMatches(data);
             console.log(data);
