@@ -43,7 +43,7 @@ public class TeamController {
         //Pageable pageable = PageRequest.of(0, 4);  // using pageable set output result size
 
         //team.setMatches(matchRepo.findLatestMatchesbyTeam(teamName,4));
-        team.setMatches(matchServices.LatestMatch(teamName,5));
+        team.setMatches(matchServices.LatestMatch(teamName,4));
 
         return team;
     }
