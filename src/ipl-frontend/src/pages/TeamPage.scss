@@ -15,16 +15,21 @@
 
     .winLossSection {
         justify-self: center;
-        padding: auto;
+        padding:25px;
         text-align: center;
     }
     .matchDetailSection{
-        grid-column: span 5;
+        grid-column: span 4;
     }
     .more{
         align-self: center;
         justify-self:center;
         font-size:1.5rem;
         text-decoration: none;
+    }
+    a{
+        color:rgb(255, 253, 253);
+        text-decoration: none;
+
     }
 }

@@ -3,6 +3,8 @@ import { MatchSmallCard } from '../components/MatchSmallCard'
 import { MatchDetailCard } from '../components/MatchDetailCard'
 // import { axios } from 'axios';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 import './TeamPage.scss';
 import { PieChart } from 'react-minimal-pie-chart';
 
@@ -40,7 +42,9 @@ export const TeamPage = () => {
     }
     return (
         <div className="TeamPage">
+            
             <div className="teamNameSection">
+                
                 <h1 className="teamName">
                     {team.teamName}
                 </h1>
@@ -54,14 +58,17 @@ export const TeamPage = () => {
                         { title: 'Win', value: team.totalWins, color: 'rgb(41, 240, 101)' },
                         
                     ]}
-                />;
+                />
             </div>
+            
             <div className="matchDetailSection">
+                <h3>Latest Match</h3>
                 <MatchDetailCard teamName={team.teamName} match={team.matches[0]} />
             </div>
             {team.matches.slice(1).map(match => <MatchSmallCard teamName={team.teamName} match={match} />)}
             <div className="more">
-                <a href="#">More >  </a>
+                <Link to={`/teams/${teamName}/matches/2020`}>More</Link>
+
             </div>
         </div>
     );

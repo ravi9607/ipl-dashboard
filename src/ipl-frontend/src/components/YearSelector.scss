@@ -1,0 +1,22 @@
+.YearSelector{
+    margin-top:10px;
+    list-style-type: none;
+    margin-right:45px;
+    text-align: right;
+
+    .Years{
+        font-size:1.5rem;
+        margin-top:25px;
+
+    }
+    a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        
+    }
+    a:hover {
+        color:rgb(151, 241, 151);
+        font-size: 1.55rem;
+    }
+    
+}
