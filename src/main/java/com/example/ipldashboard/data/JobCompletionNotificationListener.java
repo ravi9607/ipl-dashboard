@@ -20,8 +20,8 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
 
     private static final Logger log = LoggerFactory.getLogger(JobCompletionNotificationListener.class);
 
-//    JdbcTemplate.query() executes a raw SQL query via Spring's JDBC API
-//    EntityManager.createQuery() creates, but does not execute, a JPA query, via the native JPA API.
+//    JdbcTemplate.query() // executes a raw SQL query via Spring's JDBC API
+//    EntityManager.createQuery() // creates, but does not execute, a JPA query, via the native JPA API.
 
 //    private final JdbcTemplate jdbcTemplate;
 //
