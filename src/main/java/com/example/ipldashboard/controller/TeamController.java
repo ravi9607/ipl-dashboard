@@ -7,6 +7,7 @@ import com.example.ipldashboard.repo.MatchRepo;
 import com.example.ipldashboard.repo.TeamRepo;
 import com.example.ipldashboard.service.MatchServices;
 import com.example.ipldashboard.service.TeamServices;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -33,11 +34,18 @@ public class TeamController {
     }
 
     @GetMapping("/team")
+    @ApiOperation(value =" All Team",
+                    notes = "Give All teams with total wins and matches",
+                    response =Team.class)
     public List<Team> getAllTeams() {
         return this.teamServices.findallteam();
     }
 
     @GetMapping("/team/{teamName}")
+
+    @ApiOperation(value ="Team latest performance by teamName",
+            notes = "Team's latest matches",
+            response =Team.class)
     public Team getTeam(@PathVariable("teamName") String teamName){
         Team team = this.teamRepo.findByTeamName(teamName);
         //Pageable pageable = PageRequest.of(0, 4);  // using pageable set output result size
@@ -49,6 +57,9 @@ public class TeamController {
     }
 
     @GetMapping("/team/{teamName}/matches")
+    @ApiOperation(value ="Team All matches by teamName and Year",
+            notes = "Give All teams with total wins and matches",
+            response =Match.class)
     public List<Match> getMatchesForTeam(@PathVariable String teamName, @RequestParam int year) {
         LocalDate startDate = LocalDate.of(year, 1, 1);
         LocalDate endDate = LocalDate.of(year + 1, 1, 1);
