@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# IPL Dashboard (SPRING BOOT AND REACT)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Browse your favorite IPL teams and access their past games details, wins and losses ratios - accessible by team and tournament year.
 
-## Available Scripts
+## API
 
-In the project directory, you can run:
+   ### GET REQUESTS
+    Home Page - https://ipl-backend-api.herokuapp.com/api/team
+    Team Page - https://ipl-backend-api.herokuapp.com/api/team/${Team_Name}
+    Match Page- https://ipl-backend-api.herokuapp.com/api/team/${Team_Name}/matches?year=${Year}
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+### Home Page (https://ipl-dashboard-project.netlify.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Home Page Page](/src/homePage.png)
 
-### `npm run build`
+### Team Page (https://ipl-dashboard-project.netlify.app/#/teams/${Team_Name})
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Team Page Page](/src/TeamPage.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Matches Page (https://ipl-dashboard-project.netlify.app/#/teams/${Team_Name}/matches/${Year})
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Matches Page](/src/matchPage.png)
 
-### `npm run eject`
+## Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Spring Boot
+* Spring Batch
+* Java Persistence API, Repositories and JPQL
+* HSQL DB
+* React JS
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Data Set Used
+https://www.kaggle.com/patrickb1912/ipl-complete-dataset-20082020/metadata
