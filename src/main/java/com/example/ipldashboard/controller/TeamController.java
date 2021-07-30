@@ -42,7 +42,6 @@ public class TeamController {
     }
 
     @GetMapping("/team/{teamName}")
-
     @ApiOperation(value ="Team latest performance by teamName",
             notes = "Team's latest matches",
             response =Team.class)
