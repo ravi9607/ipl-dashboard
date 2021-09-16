@@ -4,6 +4,8 @@ Browse your favorite IPL teams and access their past games details, wins and los
 
 ## API
 
+![Swagger Page](/src/Swagger.png)
+
    ### GET REQUESTS
     Home Page - https://ipl-backend-api.herokuapp.com/api/team
     Team Page - https://ipl-backend-api.herokuapp.com/api/team/${Team_Name}
