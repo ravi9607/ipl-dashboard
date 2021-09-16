@@ -12,6 +12,12 @@ import java.util.List;
 @Builder      //   used to creat object using anu instant variable
 @ToString
 public class Team {
+    public Team(long id, String teamName, long totalMatches, long totalWins) {
+        this.id = id;
+        this.teamName = teamName;
+        this.totalMatches = totalMatches;
+        this.totalWins = totalWins;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
